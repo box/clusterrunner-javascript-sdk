@@ -1,0 +1,15 @@
+Simple:
+    max_executors: 10
+
+    setup_build:
+        - echo "Performing setup"
+
+    teardown_build:
+        - echo "Performing teardown"
+
+    commands:
+        - sleep 0.2
+        - echo $TOKEN
+
+    atomizers:
+        - TOKEN: seq 1 10
